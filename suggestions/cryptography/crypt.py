@@ -2,28 +2,34 @@ import string
 
 
 def caesar_cipher_encrypt():
-    encryption_key = int(raw_input("Enter encryption key: "))
-    message = raw_input("Enter message: ")
+    encryption_key = int(raw_input("Enter encryption key: ")) % 256
+    message = str(raw_input("Enter message: "))
 
     encrypted = ""
 
     for letter in message:
+    	if letter == ' ':
+	    encrypted += ' '
         encrypted += chr((ord(letter) + encryption_key) % 256)
 
-    print repr(encrypted)
-    return repr(encrypted)
+    print encrypted
+    return encrypted, encryption_key
 
 
-def caesar_cipher_decrypt(literal):
+def caesar_cipher_decrypt(literal, encryption_key):
 
-    encryption_key = 4545
 
     decrypted = ""
-    for letter in repr(literal):
-        decrypted += chr((ord(letter) + encryption_key) % 256)
+    for letter in literal:
+    	if letter == ' ':
+	    decrypted += ' '
+	elif (ord(letter) - encryption_key) < 0:
+	    decrypted += chr(255 + ord(letter) - encryption_key)
+	else:
+            decrypted += chr((ord(letter) - encryption_key))
 
     print decrypted
 
 if __name__ == "__main__":
-    # caesar_cipher_encrypt()
-    caesar_cipher_decrypt(literal='\t&*\xed\xe1%&55&\xe1&3\xe1&/\xe1)&..&-*(\xe1.&-%*/(\xe140.\xe1%6\xe1,"/\xe1%&,0%&\xe1)7*4\xe1%6\xe1)"3\xe13*,5*(\xe1/\x84y,,&-')
+    cipher_text, key = caesar_cipher_encrypt()
+    caesar_cipher_decrypt(cipher_text, key)
