@@ -9,5 +9,4 @@ Kurset er lagt opp med følgende moduler:
 | # | Tema | Linker |
 |---|------|------|
 | 0 | Installasjon og `Hello world!` | [Python](https://python.org) |
-| 1 | Hemmelig Melding |
 
