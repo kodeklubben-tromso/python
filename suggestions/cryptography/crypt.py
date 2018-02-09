@@ -8,27 +8,21 @@ def caesar_cipher_encrypt():
     encrypted = ""
 
     for letter in message:
-    	if letter == ' ':
-	    encrypted += ' '
+        print "Encrypting {0}: {1} + {2} % 256 = {3}".format(letter, ord(letter), encryption_key, ((ord(letter) + encryption_key) % 256))
         encrypted += chr((ord(letter) + encryption_key) % 256)
 
-    print encrypted
+    print "Cipher text: {0}\n".format(repr(str(encrypted)))
     return encrypted, encryption_key
 
 
 def caesar_cipher_decrypt(literal, encryption_key):
 
-
     decrypted = ""
     for letter in literal:
-    	if letter == ' ':
-	    decrypted += ' '
-	elif (ord(letter) - encryption_key) < 0:
-	    decrypted += chr(255 + ord(letter) - encryption_key)
-	else:
-            decrypted += chr((ord(letter) - encryption_key))
+        decrypted += chr((ord(letter) - encryption_key) % 256)
+        print "Decrypting {0}: {1} - {2} % 256 = {3}".format(letter, ord(letter), encryption_key, ((ord(letter) - encryption_key) % 256))
 
-    print decrypted
+    print "\nDecrypted Message: {0}".format(decrypted)
 
 if __name__ == "__main__":
     cipher_text, key = caesar_cipher_encrypt()
