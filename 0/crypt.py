@@ -37,15 +37,6 @@ def caesar_cipher_encrypt(message, encryption_key):
 
     return encrypted
 
-def caesar_cipher_decrypt(cipher_text, encryption_key):
-
-    decrypted = ""
-    for letter in cipher_text:
-        decrypted += chr((ord(letter) - encryption_key) % 256)
-        print "Decrypting {0}: {1} - {2} % 256 = {3}".format(repr(letter), ord(letter), encryption_key, ((ord(letter) - encryption_key) % 256))
-
-    return decrypted
-
 if __name__ == "__main__":
 
     key = get_key()
@@ -53,6 +44,3 @@ if __name__ == "__main__":
 
     cipher_text = caesar_cipher_encrypt(message, key)
     print "\nCipher text: {0}\n".format(repr(str(cipher_text)))
-
-    message = caesar_cipher_decrypt(cipher_text, key)
-    print "\nCipher text: {0}\n".format(repr(str(message)))
