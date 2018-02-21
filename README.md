@@ -8,7 +8,8 @@ Kurset er lagt opp med følgende moduler:
 
 | # | Tema | Linker |
 |---|------|------|
-| 0 | Installasjon og `Hello world!` | [Python](https://python.org) |
+| 0 | Installasjon og Kryptering | [Python](https://python.org) |
+| 1 | Kryptering og class-intro  | - |
 
 ## Ressurser / inspirasjon / lenkesamling
 * [Wall Ball - et spill i PyGame Zero over flere leksjoner](https://wall-ball.readthedocs.io/en/latest/index.html)
