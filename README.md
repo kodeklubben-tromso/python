@@ -12,7 +12,7 @@ Kurset er lagt opp med følgende moduler:
 | 1 | Kryptering og class-intro  | - |
 | 2 | Lister og Pygame intro  | [Pygame](https://pygame.org) |
 | 3 | Pygame Basics     |       [Pygame Docs](https://pygame.org/docs) |
-| 4 | Pygame Keyboard Input  |  [Pygame Docs (Key)](https://www.pygame.org/docs/ref/key.html)
+| 4 | Dictionaries og Pygame Keyboard Input  |  [Pygame Docs (Key)](https://www.pygame.org/docs/ref/key.html)
 
 ## Ressurser / inspirasjon / lenkesamling
 * [Wall Ball - et spill i PyGame Zero over flere leksjoner](https://wall-ball.readthedocs.io/en/latest/index.html)
