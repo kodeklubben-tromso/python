@@ -4,6 +4,9 @@ import sys
 
 pygame.init()
 
+
+# https://github.com/kodeklubben-tromso/python/
+
 class Screen:
     def __init__(self, w, h):
         self.width = w
